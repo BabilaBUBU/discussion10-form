@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Form</title>
-  <link rel="stylesheet" href="css/style.css"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<form action="https://formspree.io/f/xzzberkj" method="POST">
+    <form action="https://formspree.io/f/xzzberkj" method="POST">
         <fieldset>
-            <legend>Form</legend>
+            <legend>Dining Hall Feedback Form</legend>
+            
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" required>
 
             <label for="last-name">Last Name:</label>
             <input type="text" name="last-name" id="last-name" required>
 
-            <label for="program">Program: </label>
-            <input type="text" id="program" name="program">
+            <label for="dining-hall">Dining Hall:</label>
+            <select id="dining-hall" name="dining-hall" required>
+                <option value="north">NorthQuad Dining Hall</option>
+                <option value="south">SouthQuad Dining Hall</option>
+                <option value="east">EastQuad Dining Hall</option>
+                <option value="mj">Mosher-Jodan Dining Hall</option>
+            </select>
 
-            <div class="radio-group">
-                <p>Available Time for Picking Up Grocery:</p>
-                <input type="radio" id="morning" name="available-time" value="morning">
-                <label for="morning">Morning</label>
+            <label for="meal-time">Meal Time:</label>
+            <select id="meal-time" name="meal-time" required>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
 
-                <input type="radio" id="afternoon" name="available-time" value="afternoon">
-                <label for="afternoon">Afternoon</label>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
 
-                <input type="radio" id="evening" name="available-time" value="evening">
-                <label for="evening">Evening</label>
-
-                <input type="radio" id="weekend" name="available-time" value="weekend">
-                <label for="weekend">Weekend</label>
-            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+    
+            <label for="rating">Overall Rating:</label>
+            <input type="range" id="rating" name="rating" min="1" max="5" required>
+    
+            <label for="favorite-dish">Favorite Dish:</label>
+            <input type="text" id="favorite-dish" name="favorite-dish">
+    
+            <label for="newsletter">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
 
             <input type="submit" value="Submit">
         </fieldset>
